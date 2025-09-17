@@ -35,6 +35,8 @@ bash scripts/shodan_quickscan.sh --dry-run "nginx country:JP" --limit 10
 Get a host report (replace with a host you are authorized to query):
 
 python3 scripts/shodan_report.py 1.2.3.4 --out demo_report.json --dry-run
+## License
+This project is licensed under the [MIT License](LICENSE).
 
 
 
