@@ -1,0 +1,2 @@
+shodan==1.29.0
+(If pip install -r requirements.txt errors on exact version, use shodan alone. Pinning is recommended but not mandatory.)
