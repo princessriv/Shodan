@@ -1,7 +1,7 @@
 # Shodan Reconnaissance (SODAN) — Educational Repo
 
 **Purpose.** Short, ethical demo of using Shodan for reconnaissance and asset discovery.  
-This repository is a learning / portfolio piece for a Master's application in Cybersecurity.
+This repository is for a learning purpose.
 
 **Important — Legal & Ethical**
 - Only run these scripts against hosts you own or are explicitly authorized to test.
