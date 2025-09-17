@@ -1,4 +1,3 @@
-# Shodan
 # Shodan Reconnaissance (SODAN)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
@@ -22,25 +21,27 @@
 - [Author / Contact](#author--contact)  
 - [License](#license)
 
----
+-
 
 ## About
 **Shodan** is a search engine for Internet-connected devices (IoT). Unlike general web search engines that index pages, Shodan indexes service banners and metadata (open ports, service versions, headers) returned by devices. Security professionals use Shodan to discover exposed systems, assess attack surfaces, and prioritize remediation.
 
 This repository (SODAN) documents concise, professional training notes and practical examples for reconnaissance using Shodan, demonstrating hands-on skills relevant to cybersecurity study and operations.
 
----
+
 
 ## Repository Structure
 
-/ ├── README.md                # (this file) ├── examples/                # sample commands and sanitized outputs │   ├── shodan-searches.md │   └── host-report-example.txt ├── scripts/                 # helper scripts (optional) │   └── shodan-quickscan.sh ├── assets/                  # screenshots / diagrams (optional) └── LICENSE
+
+/ ├── README.md                # (this file) ├── LICENSE                  # MIT License file ├── examples/                # sample commands and sanitized outputs │   ├── shodan-searches.md │   └── host-report-example.txt ├── scripts/                 # helper scripts (safe, non-intrusive) │   └── shodan-quickscan.sh ├── assets/                  # screenshots / diagrams (optional)
+
 ## Prerequisites
 - Python 3.x (for CLI install via pip)  
 - A Shodan account (free or paid) — obtain API key from your dashboard at https://www.shodan.io  
 - Internet access and familiarity with the command line  
 - Optional: `jq` for JSON parsing
 
----
+
 
 ## Installation
 
@@ -64,7 +65,7 @@ shodan init YOUR_API_KEY_HERE
 shodan version
 
 
----
+
 
 Quick Start (Shodan CLI)
 
@@ -80,7 +81,7 @@ shodan search "nginx country:JP"
 shodan host 203.0.113.5
 
 
----
+
 
 Common Commands & Examples
 
@@ -92,7 +93,7 @@ shodan search "webcamxp"
 # Telnet devices (port 23) in the United States
 shodan search "port:23 country:US"
 
-# Industrial Modbus devices (port 502)
+# Industrial Modbus devices (port:502)
 shodan search "port:502"
 
 Host information
@@ -108,8 +109,10 @@ shodan download my-results "apache country:DE"
 # Parse downloaded data (example fields)
 shodan parse --fields ip_str,port,product my-results.json.gz
 
+For more queries, see examples/shodan-searches.md.
 
----
+
+
 
 Sample Mini Case Study
 
@@ -144,10 +147,10 @@ Example outcome (sanitized):
 Recommendations: Disable remote access, enforce strong credentials, apply firmware updates, and restrict access via firewall or VPN.
 
 
-This mini case study demonstrates methodical reconnaissance, triage, and actionable reporting.
+This mini case study demonstrates methodical reconnaissance, triage, and actionable reporting. See examples/host-report-example.txt.
 
 
----
+
 
 Use Cases in Cybersecurity
 
@@ -161,7 +164,7 @@ Incident response — verify whether an IP or service is visible externally duri
 
 
 
----
+
 
 Ethical & Legal Considerations
 
@@ -177,7 +180,7 @@ Unauthorized access or probing can be illegal and unethical. When in doubt, obta
 
 
 
----
+
 
 Further Reading & Resources
 
@@ -186,6 +189,31 @@ Official Shodan: https://www.shodan.io
 Shodan CLI docs: shodan --help and the Shodan website documentation
 
 Responsible disclosure and local laws for digital investigations
+
+
+
+
+
+Author / Contact
+
+Prepared as part of a SODAN (Shodan) training note .
+
+Author: [Sarita Gurung.]
+
+Email: [princessriv66@gmail.com]
+
+
+
+GitHub: https://github.com/princessriv
+
+
+
+
+
+License
+
+This project is provided under the MIT License. See LICENSE for details.
+
 
 
 
